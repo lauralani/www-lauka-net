@@ -1,0 +1,34 @@
+---
+title: lauka (dot) net
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta
+            name="viewport"
+            content="shrink-to-fit=no,width=device-width,height=device-height,initial-scale=1,user-scalable=1">
+        <meta name="description" content="My little cozy place on the web.">
+        <title>lauka.net - Book: {{ name }}</title>
+        <link rel="author" href="{{ '/humans.txt' | url }}"/>
+        <link rel='stylesheet' type='text/css' media='screen' href="{{ '/css/main.css' | url }}"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | url }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | url }}">
+        <link rel="manifest" href="{{ '/site.webmanifest' | url }}">
+    </head>
+    <body class="h-card">
+        <h1><a href="/">lauka.net - Book: {{ name }}</a></h1>
+        <h2>Rating: 
+        {% for i in range(0, rating) -%}
+                ⭐
+        {%- endfor %}
+        
+        </h2>
+        <p class="p-note">
+            {{ content | safe }}
+        </p>
+    </body>
+</html>
